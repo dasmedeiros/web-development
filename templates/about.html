@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About me - Daniel Medeiros' portfolio</title>
+  <link href="/static/css/styles.css" rel="stylesheet"/>
+  <link href="/static/css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+</head>
+<body>
+  {% extends "base.html" %}
+  {% block content %}
+  <main class="main">
+    <section class="main_titles">
+      <h1 class="title">Get to know more about me!</h1>
+      <p class="subtitle">Read my story and achievements.</p>
+    </section>
+    <section class="about">
+      <img class="profile_pic" src="/static/images/daniel_profile.JPG" alt=""/>
+      <div>
+        <p>I help organizations make better decisions by translating raw information into tangible ideas. To achieve the best outcomes, I can employ a range of the most modern data-driven techniques and tools such as SQL, Python, Spark, Power BI, and Tableau.</p>
+        <p>In 2014, I started a bachelor's in Computer Science, but without a sense of belongingness, I decided to drop out. In 2016, I was accepted into one of the most prestigious universities in Brazil to pursue my Business degree. In the following 5 years, with a combination of in- and off-campus experiences in different businesses and organizational areas I developed a robust skillset ranging from critical thinking, fast learning, and easy adaptability in multicultural environments.</p>
+        <p>In 2021, after a successful and enriching internship in a global company and just before graduating I landed a job in the booming field of data science. I worked as a Business Intelligence Analyst solving problems for major financial institutes in Brazil. In a span of 15 months, I was able to lay the analytics foundations for 3 big players by helping them launch an AI in the form of chatbots which generated massive amounts of data. As the 'data guy' I was responsible for defining data tracking, data manipulation, and translating both structured and unstructured data it into actionable insights.</p>         
+        <p>Now in 2022, I made an ambitious move to Canada to expand my knowledge in data science by taking a data analytics post-graduate program at Durham College. My willingness to change, working hard skills, and high motivation are making this the most life-changing experience.</p>
+        <p>Do you need help with extracting useful insights from big data? <b>Contact me</b> and I will let you know how my hard skills along with my result orientation and hands-on competencies can help your organization achieve its key objectives.</p>
+      </div>
+      <div class="others_links">
+        <a href="/static/files/Resume_Daniel_Medeiros.docx" class="download_resume" download>
+          Download my resume
+        </a>
+        <p class="italic">
+          or
+        </p>
+        <a href="https://github.com/dasmedeiros" target="_blank" rel="noopener noreferrer" class="contact_link">
+          <i class="fa fa-github fa-3x" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/medeiros-daniel/" target="_blank" rel="noopener noreferrer" class="contact_link">
+          <i class="fa fa-linkedin fa-3x" aria-hidden="true"></i>
+        </a>
+        <a href="/contact" class="contact_link">
+          <i class="fa fa-envelope fa-3x" aria-hidden="true"></i>
+        </a>
+      </div>
+      </section>
+  </main>
+  {% endblock %}
+</body>
+</html>

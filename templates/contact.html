@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact me - Daniel Medeiros' portfolio</title>
+  <link href="/static/css/styles.css" rel="stylesheet"/>
+  <link href="/static/css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+</head>
+<body>
+  {% extends "base.html" %}
+  {% block content %}
+  <main class="main">
+    <section class="main_titles">
+      <h1 class="title">Let's connect!</h1>
+      <p class="subtitle">Send me a message and I will reach back.</p>
+    </section>
+    <section class="contact">
+      {% if success %}
+      <p class="success_message"> Thank you, {{ contact_name }}. Your message was successfully sent!</p>
+      {% endif %}
+      <form class="contact_form" method="POST">
+        <p class="contact_form-input">
+          <input type="text" name="name" id="contact_input" placeholder="Your name" aria-label="Insert your name"/>
+          <input type="email" name="email" id="contact_input" placeholder="Your best email" aria-label="Insert your best email address" required/>
+          <input type="tel" name="tel" id="contact_input" placeholder="Your phone number" aria-label="Insert you phone number"/>
+          <textarea name="message" id="entry" class="contact_form-textarea" placeholder="Leave me a message!"></textarea>
+        </p>
+        <button type="submit" class="contact_form-submit">Send message</button>
+      </form>
+  </main>
+  {% endblock %}
+</body>
+</html>
