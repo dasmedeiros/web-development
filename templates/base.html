@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daniel's Portfolio</title>
-    <link href="/static/css/styles.css" rel="stylesheet"/>
-    <link href="/static/css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="{{ url_for('static', filename='css/styles.css')}}" rel="stylesheet"/>
+    <link href="{{ url_for('static', filename='css/font-awesome-4.7.0/css/font-awesome.min.css')}}" rel="stylesheet"/>
 </head>
 <body>
     <div class="wrapper">
@@ -14,9 +14,9 @@
             <a href="/" class="header_logo">Daniel's Porfolio</a>
             <div class="header_nav">
                 <!--<a href="/" class="header_link">Recent</a>-->
-                <a href="/about" class="header_link">About</a>
-                <a href="/feedback" class="header_link">Feedback</a>
-                <a href="/contact" class="contact_button">Contact</a>
+                <a href="{{ url_for('about') }}" class="header_link">About</a>
+                <a href="{{ url_for('feedback') }}" class="header_link">Feedback</a>
+                <a href="{{ url_for('contact') }}" class="contact_button">Contact</a>
             </div>
         </header>
 
@@ -27,9 +27,9 @@
             <a href="https://www.linkedin.com/in/medeiros-daniel/" target="_blank" rel="noopener noreferrer" class="madeby">Made by Daniel Medeiros</a>
             <div class="footer_nav">
                 <!--<a href="/" class="footer_link">Recent</a>-->
-                <a href="/about" class="footer_link">About</a>
-                <a href="/feedback" class="footer_link">Feedback</a>
-                <a href="/contact" class="footer_link">Contact</a>
+                <a href="{{ url_for('about') }}" class="footer_link">About</a>
+                <a href="{{ url_for('feedback') }}" class="footer_link">Feedback</a>
+                <a href="{{ url_for('contact') }}" class="footer_link">Contact</a>
             </div>
         </footer>
     </div>

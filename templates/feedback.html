@@ -1,45 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feedback - Daniel Medeiros' portfolio</title>
-  <link href="/static/css/styles.css" rel="stylesheet"/>
-  <link href="/static/css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
-</head>
-<body>
-  {% extends "base.html" %}
-  {% block content %}
-  <main class="main">
-    <section class="main_titles">
-      <h1 class="title">Share your thoughts and suggestions.</h1>
-      <p class="subtitle">Your feedback  is important for my continous learning experience!</p>
-    </section>
-    <section class="feedback">
-      <h1>Add new review</h1>
-      <form class="feedback_form" method="POST">
-        <p class="feedback_form-input">
-          <label for="entry" class="feedback_form-label">Please, share anything that will help me prepare for the job market.</label>
-          <textarea name="content" id="entry" class="feedback_form-textarea"></textarea>
+{% extends "base.html" %}
+{% block content %}
+<main class="main">
+  <section class="main_titles">
+    <h1 class="title">Share your thoughts and suggestions.</h1>
+    <p class="subtitle">Your feedback  is important for my continous learning experience!</p>
+  </section>
+  <section class="feedback">
+    <h1>Add new review</h1>
+    <form class="feedback_form" method="POST">
+      <p class="feedback_form-input">
+        <label for="entry" class="feedback_form-label">Please, share anything that will help me prepare for the job market.</label>
+        <textarea name="content" id="entry" class="feedback_form-textarea"></textarea>
+      </p>
+      <button type="submit" class="feedback_form-submit">Add feedback</button>
+    </form>
+  </section>
+  <section class="entries">
+    <h1>Recent reviews</h1>
+    {% for entry in entries %}
+      <article class="feedback_entry">
+        <div>
+          <h2 class="feedback_entry-title">{{ entry[0] | truncate(30, true) }}</h2>
+          <time class="feedback_entry-date" datetime="{{ entry[1] }}">• {{ entry[2] }}</time>
+        </div>
+        <p class="feedback_entry-content">
+          {{ entry[0] }}
         </p>
-        <button type="submit" class="feedback_form-submit">Add feedback</button>
-      </form>
-    </section>
-    <section class="entries">
-      <h1>Recent reviews</h1>
-      {% for entry in entries %}
-        <article class="feedback_entry">
-          <div>
-            <h2 class="feedback_entry-title">{{ entry[0] | truncate(30, true) }}</h2>
-            <time class="feedback_entry-date" datetime="{{ entry[1] }}">• {{ entry[2] }}</time>
-          </div>
-          <p class="feedback_entry-content">
-            {{ entry[0] }}
-          </p>
-        </article>
-      {% endfor %}
-    </section>
-  </main>
-  {% endblock %}
-</body>
-</html>
+      </article>
+    {% endfor %}
+  </section>
+</main>
+{% endblock %}

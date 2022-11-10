@@ -1,72 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage - Daniel Medeiros' portfolio </title>
-    <link href="/static/css/styles.css" rel="stylesheet"/>
-    <link href="/static/css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
-</head>
-<body>
-    <div class="wrapper">
-        {% extends "base.html" %}
-        {% block content %}
-        <main class="main">
-            <section class="main_titles">
-                <h1 class="title">I will expedite your organization decision-making with big data analytics.</h1>
-                <p class="subtitle">Get to know how I can employ a broad range of data-driven skills to solve real-life problems.</p>
-            </section>
-            <section class="search_project">
-                <form action="/" class="search_bar" method="POST">
-                    <input type="text" name="search" id="search_input" placeholder="Search engine to be implemented later." aria-label="Search keywords to find related projects"/>
-                    <button type="submit" class="search_button"><i class="fa fa-search fa-lg" aria-hidden="true"></i></button>
-                </form>
-            </section>    
-            <section class="featured_projects">
-                <h2>Featured projects</h2>
-                <div class="fp_flexbox">
-                    <article class="fp">
-                        <a class="fp_img1" href="/">
-                            <div class="fp_img_title">Featured project 1</div>
-                            <div class="fp_img_subtitle">Linear Regression using scikit-learn</div>
-                        </a>
-                    </article>
-                    <article class="fp">
-                        <a class="fp_img2" href="/">
-                            <div class="fp_img_title">Featured project 2</div>
-                            <div class="fp_img_subtitle">Linear Regression using scikit-learn</div>
-                        </a>
-                    </article>
-                    <article class="fp">
-                        <a class="fp_img3" href="/">
-                            <div class="fp_img_title">Featured project 3</div>
-                            <div class="fp_img_subtitle">Linear Regression using scikit-learn</div>
-                        </a>
-                    </article>
-                    <article class="fp">
-                        <a class="fp_img4" href="/">
-                            <div class="fp_img_title">Featured project 4</div>
-                            <div class="fp_img_subtitle">Linear Regression using scikit-learn</div>
-                        </a>
-                    </article>
-                </div>
-            </section>
-            <section class="about_me">
-                <div class="intro">
-                    <p class="intro_text">
-                        <i class="intro_title">Nice to meet you, I’m Daniel Medeiros.</i><br>
-                        I help organizations make better decisions by translating raw information into tangible ideas. To achieve the best outcomes, I can employ a range of the most modern data-driven techniques and tools such as SQL, Python, Spark, Power BI, and Tableau.
-                        In 2021, after a successful and enriching internship in a global company and just before graduating I landed a job in the booming field of data science. I worked as a Business Intelligence Analyst solving problems for major financial institutes in Brazil. In a span of 15 months, I was able to lay the analytics foundations for 3 big players by helping them launch an AI in the form of chatbots which generated massive amounts of data. As the 'data guy' I was responsible for defining data tracking, data manipulation, and translating both structured and unstructured data it into actionable insights.
-                        <br>Now in 2022, I made an ambitious move to Canada to expand my knowledge in data science by taking a data analytics post-graduate program at Durham College. My willingness to change, working hard skills, and high motivation are making this the most life-changing experience.
-                        Do you need help with extracting useful insights from big data? Contact me and I will let you know how my hard skills along with my result orientation and hands-on competencies can help your organization achieve its key objectives.
-                    </p>
-                </div>
-            </section>
-        </main>
-        {% endblock %}
-    </div>
-    <aside class="aside aside-1"></aside>
-    <aside class="aside aside-2"></aside>
-</body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+<main class="main">
+    <section class="main_titles">
+        <h1 class="title">I will expedite your organization decision-making with big data analytics.</h1>
+        <p class="subtitle">Get to know how I can employ a broad range of data-driven skills to solve real-life problems.</p>
+    </section>
+    <section class="search_project">
+        <form action="/" class="search_bar" method="POST">
+            <input type="text" name="search" id="search_input" placeholder="Search engine to be implemented later." aria-label="Search keywords to find related projects"/>
+            <button type="submit" class="search_button"><i class="fa fa-search fa-lg" aria-hidden="true"></i></button>
+        </form>
+    </section>    
+    <section class="featured_projects">
+        <h2>Featured projects</h2>
+        <div class="fp_flexbox">
+            <article class="fp">
+                <a class="fp_img1">
+                    <div class="fp_img_title">Featured project 1</div>
+                    <div class="fp_img_subtitle">Linear Regression using scikit-learn</div>
+                </a>
+            </article>
+            <article class="fp">
+                <a class="fp_img2">
+                    <div class="fp_img_title">Featured project 2</div>
+                    <div class="fp_img_subtitle">Linear Regression using scikit-learn</div>
+                </a>
+            </article>
+            <article class="fp">
+                <a class="fp_img3">
+                    <div class="fp_img_title">Featured project 3</div>
+                    <div class="fp_img_subtitle">Linear Regression using scikit-learn</div>
+                </a>
+            </article>
+            <article class="fp">
+                <a class="fp_img4">
+                    <div class="fp_img_title">Featured project 4</div>
+                    <div class="fp_img_subtitle">Linear Regression using scikit-learn</div>
+                </a>
+            </article>
+        </div>
+    </section>
+    <section class="about_me">
+        <div class="intro">
+            <p class="intro_text">
+                <i class="intro_title">Nice to meet you, I’m Daniel Medeiros.</i><br>
+                I help organizations make better decisions by translating raw information into tangible ideas. To achieve the best outcomes, I can employ a range of the most modern data-driven techniques and tools such as SQL, Python, Spark, Power BI, and Tableau.
+                In 2021, after a successful and enriching internship in a global company and just before graduating I landed a job in the booming field of data science. I worked as a Business Intelligence Analyst solving problems for major financial institutes in Brazil. In a span of 15 months, I was able to lay the analytics foundations for 3 big players by helping them launch an AI in the form of chatbots which generated massive amounts of data. As the 'data guy' I was responsible for defining data tracking, data manipulation, and translating both structured and unstructured data it into actionable insights.
+                <br>Now in 2022, I made an ambitious move to Canada to expand my knowledge in data science by taking a data analytics post-graduate program at Durham College. My willingness to change, working hard skills, and high motivation are making this the most life-changing experience.
+                Do you need help with extracting useful insights from big data? Contact me and I will let you know how my hard skills along with my result orientation and hands-on competencies can help your organization achieve its key objectives.
+            </p>
+        </div>
+    </section>
+</main>
+{% endblock %}
