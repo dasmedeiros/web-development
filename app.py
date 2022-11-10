@@ -11,7 +11,7 @@ def create_app():
     client = MongoClient(os.getenv("DATABASE_URL"))
     app.db = client.portfolio
 
-    @app.route("/", methods=["GET", "POST"])
+    @app.route("/")
     def home():
         return render_template("home.html")
     
