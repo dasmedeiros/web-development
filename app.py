@@ -13,9 +13,6 @@ def create_app():
 
     @app.route("/", methods=["GET", "POST"])
     def home():
-        if request.method == "POST":
-            #implement search engine later
-            return render_template("home.html")
         return render_template("home.html")
     
     @app.route("/about/")
