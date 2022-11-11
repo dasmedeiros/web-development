@@ -241,8 +241,6 @@ body {
     flex-flow: row wrap;
     align-items: flex-start;
     align-content: flex-start;
-    text-align: center;
-    gap: 2rem;
     padding: 5rem;
 }
 
@@ -333,7 +331,6 @@ body {
 }
 
 .about p {
-    text-indent: 1rem;
     margin: 0;
 }
 .profile_pic {
