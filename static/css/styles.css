@@ -31,7 +31,6 @@ body {
     display: flex;
     box-sizing: border-box;
     min-height: 100vh;
-    margin: 1rem 0;
 }
 
 .main {
@@ -46,8 +45,9 @@ body {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 50px;
+    margin: 1rem 0;
 }
 
 .wrapper > * {
@@ -112,6 +112,7 @@ body {
     display: inherit;
     flex-direction: row;
     font-size: 0.875rem;
+    align-self: flex-end;
 }
 
 .footer a:hover {
