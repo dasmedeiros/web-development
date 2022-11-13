@@ -59,7 +59,7 @@ body {
 }
 
 @media all and (min-width: 768px) {
-    .wrapper { flex: 3 0px; }
+    .wrapper { flex: 2.5 0px; }
     .aside-1 { order: 1; }
     .wrapper { order: 2; }
     .aside-2 { order: 3; }
