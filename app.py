@@ -49,6 +49,18 @@ def create_app():
             app.db.messages.insert_one({"name": contact_name, "email": contact_email, "tel": contact_tel, "message": contact_message})
             success = True
 
-        return render_template("contact.html", contact_name=contact_name, success=success)    
+        return render_template("contact.html", contact_name=contact_name, success=success)
+
+    @app.route('/post/', methods=["GET", "POST"])
+    def display_post():
+        selected_post = request.args.get('project')
+        post = app.db.posts.find_one({"project": selected_post})
+        if post:
+            return render_template("post.html", post=post)
+        return render_template("home.html") #Later change to redirect user to blog page where shows recent projects      
+
+    #Include blog page
+    
+    #Later include error handling pages like 404, 403, 401, 500
 
     return app

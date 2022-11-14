@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<main class="main">
+    {% if post %}
+    <section class="post_header">
+        <h2 class="post_intro">LEARN HOW I USED</h1>
+        <h1 class="post_title">{{ post['title'] }}</h1>
+        <p class="post_description">{{ post['description'] }}</p>
+        {% if post['github_link'] %}
+            <a href="{{ post['github_link'] }}" class="post_link">Access the full code here</a>
+        {% endif %}
+        <div class="post_tags">
+            {% for key, tag in post['tags'].items() %}
+            <a class="post_tag">{{ tag }}</a>
+            {% endfor %}
+        </div>
+    </section>
+    <section class="post_text">
+        <p class="post_date">This post was created on {{ post['creation_date'] }} and last updated on {{ post['update_date'] }}.</p>
+        {{ post['content']|safe }}
+        <a href="{{ url_for('home') }}" class="view_more">View more projects ></a>
+    </section>
+    {% endif %}
+</main>
+{% endblock %}
