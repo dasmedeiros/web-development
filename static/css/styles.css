@@ -66,7 +66,7 @@ body {
 }
 
 @media all and (min-width: 1366px) {
-    .about { padding: 0 15%; }
+    .about, .roadmap { padding: 0 15%; }
 }
 
 /* header */
@@ -379,6 +379,13 @@ body {
 
 .italic {
     font-style: italic;
+}
+
+.roadmap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
 }
 
 /* contact me */
